@@ -143,7 +143,6 @@ http://localhost:8080 | jq -r ".result.proven.number"
 * Check the latest block number of Aztec network: https://aztecscan.xyz/
 ## 10. Register Validator
 Make sure your Sequencer node is fully synced, before you proceed with Validator registration.
-
 **Official Validator Registration: ZKPassport**
 * Visit: https://testnet.aztec.network/add-validator
 * Complete ZKPassport humanity verification
