@@ -46,27 +46,26 @@ echo 'export PATH="$HOME/.aztec/bin:$PATH"' >> ~/.bashrc
 
 source ~/.bashrc
 ```
-* **Restart your Terminal** now to apply changes.
 * Check if you installed successfully:
 ```bash
 aztec --version
 ```
-## 4. Obtain RPC URLs
+## 3. Obtain RPC URLs
 * Find a 3rd party that supports Sepolia `RPC URL` & Sepolia `BEACON URL` APIs.
 * Most of your usage is `RPC URL`. I recommend to use [Alchemy](https://dashboard.alchemy.com/) for `RPC URL` & Use [drpc](https://drpc.org/) for `Beacon URL`. 
 ### Free:
 * `RPC URL`: Create a Sepolia Ethereum HTTP API in [Alchemy](https://dashboard.alchemy.com/)
 * `BEACON RPC`: Create an account on [drpc](https://drpc.org/) and search for `Sepolia Ethereum Beacon Chain ` Endpoints.
-## 5. Generate Ethereum Keys
+## 4. Generate Ethereum Keys
 Get an EVM Wallet with `Private Key` and `Public Address` saved.
-## 6. Get Sepolia ETH
+## 5. Get Sepolia ETH
 Fund your Ethereum Wallet with `ETH Sepolia`
-## 7. Find IP
+## 6. Find IP
 ```bash
 curl ipv4.icanhazip.com
 ```
 * Save it
-## 8. Enable Firewall & Open Ports
+## 7. Enable Firewall & Open Ports
 ```console
 # Firewall
 ufw allow 22
@@ -77,8 +76,7 @@ ufw enable
 ufw allow 40400
 ufw allow 8080
 ```
-## 9. Run Sequencer Node
-### Run via Docker
+## 8. Run Sequencer Node via Docker
 * Create `aztec` directory:
 ```bash
 mkdir aztec
@@ -140,7 +138,7 @@ docker compose logs -fn 1000
 ```bash
 docker compose down
 ```
-## 10. Sync Node
+## 9. Sync Node
 After entering the command, your node starts running, It takes a few minutes for your node to get synced.
 * Check the latest synced block number of your sequencer:
 ```
@@ -149,7 +147,7 @@ curl -s -X POST -H 'Content-Type: application/json' \
 http://localhost:8080 | jq -r ".result.proven.number"
 ```
 * Check the latest block number of Aztec network: https://aztecscan.xyz/
-## 11. Register Validator
+## 10. Register Validator
 Make sure your Sequencer node is fully synced, before you proceed with Validator registration.
 
 **Official Validator Registration: ZKPassport**
@@ -157,7 +155,7 @@ Make sure your Sequencer node is fully synced, before you proceed with Validator
 * Complete ZKPassport humanity verification
 * Follow the steps to connect your validator wallet and register your validator on the network
 * After competion, you will get into the queue of validator registration and will earn **Explorer** discord role
-## 12. Aztec Dashboard
+## 11. Aztec Dashboard
 * Visit the [Dashboard](https://dashtec.xyz/)
 * Check your validators health
 * Connect your X & Discord
