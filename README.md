@@ -50,10 +50,8 @@ source ~/.bashrc
 ```bash
 aztec --version
 ```
+#### Lastest version: `1.2.1`
 ## 3. Obtain RPC URLs
-* Find a 3rd party that supports Sepolia `RPC URL` & Sepolia `BEACON URL` APIs.
-* Most of your usage is `RPC URL`. I recommend to use [Alchemy](https://dashboard.alchemy.com/) for `RPC URL` & Use [drpc](https://drpc.org/) for `Beacon URL`. 
-### Free:
 * `RPC URL`: Create a Sepolia Ethereum HTTP API in [Alchemy](https://dashboard.alchemy.com/)
 * `BEACON RPC`: Create an account on [drpc](https://drpc.org/) and search for `Sepolia Ethereum Beacon Chain ` Endpoints.
 ## 4. Generate Ethereum Keys
@@ -77,13 +75,9 @@ ufw allow 40400
 ufw allow 8080
 ```
 ## 8. Run Sequencer Node via Docker
-* Create `aztec` directory:
+* Create & get into `aztec` directory:
 ```bash
-mkdir aztec
-```
-* Get into `aztec` directory:
-```bash
-cd aztec
+mkdir aztec && cd aztec
 ```
 * Create `.env`
 ```bash
